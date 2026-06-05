@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dblp SYSTEM "dblp.dtd">
+<dblp>
+
+<inproceedings mdate="2002-01-03" key="persons/JohnLM94">
+<author>Werner John</author>
+<author>Dominik Ley</author>
+<author>Joachim Muller</author>
+<title>ROSAR</title>
+<pages>40-43</pages>
+<year>1994</year>
+<booktitle>(EMC'94)</booktitle>
+</inproceedings>
+
+<article mdate="2002-01-03" key="persons/Tresch96">
+<author>Markus Tresch</author>
+<title>Principles of Distributed Object Database Languages.</title>
+<journal>technical Report 248, ETH Z&uuml;rich, Dept. of Computer Science</journal>
+<month>July</month>
+<year>1996</year>
+</article>
+
+<inproceedings mdate="2010-4-13" key="persons/Khalid10">
+<author>Khalid Mohammed</author>
+<title>KORAL</title>
+<pages>101-107</pages>
+<year>2010</year>
+<booktitle>(KRW'10)</booktitle>
+</inproceedings>
+
+</dblp>

@@ -1,0 +1,318 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{NMMMBLP07}
+
+\bibitem[BG04]{BhGe04}
+Indrajit Bhattacharya and Lise Getoor.
+\newblock {I}terative {R}ecord {L}inkage for {C}leaning and {I}ntegration.
+\newblock In {\em Proceedings of the 9th ACM SIGMOD workshop on Research issues
+  in data mining and knowledge discovery}, DMKD ’04, pages 11--18. ACM, 2004.
+
+\bibitem[BG06]{BhGe06b}
+Indrajit Bhattacharya and Lise Getoor.
+\newblock {E}ntity {R}esolution in {G}raphs.
+\newblock In {\em Mining Graph Data}, pages 311--344. John Wiley \& Sons, Inc,
+  2006.
+
+\bibitem[BG07]{BhGe07}
+Indrajit Bhattacharya and Lise Getoor.
+\newblock {C}ollective {E}ntity {R}esolution in {R}elational {D}ata.
+\newblock {\em ACM Transactions on Knowledge Discovery from Data}, 1(1), 2007.
+
+\bibitem[BGMG{\etalchar{+}}]{BGG*07}
+Omar Benjelloun, Hector Garcia-Molina, Heng Gong, Hideki Kawai, Tait~E. Larson,
+  David Menestrina, and Sutthipong Thavisomboon.
+\newblock {D}-{S}woosh: {A} {F}amily of {A}lgorithms for {G}eneric,
+  {D}istributed {E}ntity {R}esolution.
+\newblock In {\em 27th International Conference on Distributed Computing
+  Systems}, ICDCS '07, pages 37--37.
+
+\bibitem[BGMM{\etalchar{+}}09]{BGM*09}
+Omar Benjelloun, Hector Garcia-Molina, David Menestrina, Qi~Su, Steven~Euijong
+  Whang, and Jennifer Widom.
+\newblock {S}woosh: {A} {G}eneric {A}pproach to {E}ntity {R}esolution.
+\newblock {\em The VLDB Journal}, 18(1):255--276, 2009.
+
+\bibitem[BLGS06]{BLG*06}
+Mustafa Bilgic, Louis Licamele, Lise Getoor, and Ben Shneiderman.
+\newblock {D}-{D}upe: {A}n {I}nteractive {T}ool for {E}ntity {R}esolution in
+  {S}ocial {N}etworks.
+\newblock In {\em Proceedings of the 13th international conference on Graph
+  Drawing}, GD’05, pages 505--507. Springer-Verlag, 2006.
+
+\bibitem[BM03]{BiMo03}
+Mikhail Bilenko and Raymond~J. Mooney.
+\newblock {A}daptive {D}uplicate {D}etection {U}sing {L}earnable {S}tring
+  {S}imilarity {M}easures.
+\newblock In {\em Proceedings of the ninth ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, KDD ’03, pages 39--48. ACM, 2003.
+
+\bibitem[CCGK07]{CCG*07}
+Surajit Chaudhuri, Bee-Chung Chen, Venkatesh Ganti, and Raghav Kaushik.
+\newblock {E}xample-driven {D}esign of {E}fficient {R}ecord {M}atching
+  {Q}ueries.
+\newblock In {\em Proceedings of the 33rd international conference on Very
+  large data bases}, VLDB ’07, pages 327--338. VLDB Endowment, 2007.
+
+\bibitem[CCH04]{CCHe04}
+Peter Christen, Tim Churches, and Markus Hegland.
+\newblock {F}ebrl -- {A} {P}arallel {O}pen {S}ource {D}ata {L}inkage {S}ystem.
+\newblock In {\em Advances in Knowledge Discovery and Data Mining}, volume 3056
+  of {\em Lecture Notes in Computer Science}, pages 638--647. Springer Berlin
+  Heidelberg, 2004.
+
+\bibitem[Chr08]{Chri08}
+Peter Christen.
+\newblock {F}ebrl -: {A}n {O}pen {S}ource {D}ata {C}leaning, {D}eduplication
+  and {R}ecord {L}inkage {S}ystem with a {G}raphical {U}ser {I}nterface.
+\newblock In {\em Proceedings of the 14th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, KDD ’08, pages 1065--1068. ACM,
+  2008.
+
+\bibitem[Chr12]{Chri12}
+Peter Christen.
+\newblock {\em Data matching: {C}oncepts and {T}echniques for {R}ecord
+  {L}inkage, {E}ntity {R}esolution, and {D}uplicate {D}etection}.
+\newblock Data-centric systems and applications. Springer, 2012.
+
+\bibitem[CKM09]{CKMe09}
+Zhaoqi Chen, Dmitri~V. Kalashnikov, and Sharad Mehrotra.
+\newblock {E}xploiting {C}ontext {A}nalysis for {C}ombining {M}ultiple {E}ntity
+  {R}esolution {S}ystems.
+\newblock In {\em Proceedings of the 2009 ACM SIGMOD International Conference
+  on Management of data}, SIGMOD ’09, pages 207--218. ACM, 2009.
+
+\bibitem[CRF03]{CRFi03}
+William~W. Cohen, Pradeep Ravikumar, and Stephen~E. Fienberg.
+\newblock {A} {C}omparison of {S}tring {D}istance {M}etrics for {N}ame-matching
+  {T}asks.
+\newblock In {\em Proceedings of Workshop on Information Integration on the Web
+  (IIWeb-03)}, IJCAI-03, pages 73--78. 2003.
+
+\bibitem[DBGH11]{DGHe11}
+Guilherme Dal~Bianco, Renata Galante, and Carlos~A. Heuser.
+\newblock {A} {F}ast {A}pproach for {P}arallel {D}eduplication on {M}ulticore
+  {P}rocessors.
+\newblock In {\em Proceedings of the 2011 ACM Symposium on Applied Computing},
+  SAC ’11, pages 1027--1032. ACM, 2011.
+
+\bibitem[DG08]{DeGh08}
+Jeffrey Dean and Sanjay Ghemawat.
+\newblock {M}ap{R}educe: {S}implified {D}ata {P}rocessing on {L}arge
+  {C}lusters.
+\newblock {\em Communications of the ACM (CACM)}, 51(1):107--113, 2008.
+
+\bibitem[DHM05]{DHMa05}
+Xin Dong, Alon Halevy, and Jayant Madhavan.
+\newblock {R}eference {R}econciliation in {C}omplex {I}nformation {S}paces.
+\newblock In {\em Proceedings of the 2005 ACM SIGMOD international conference
+  on Management of data}, SIGMOD ’05, pages 85--96. ACM, 2005.
+
+\bibitem[DN10]{DrNa10}
+Uwe Draisbach and Felix Naumann.
+\newblock {D}ude: {T}he {D}uplicate {D}etection {T}oolkit.
+\newblock In {\em Proceedings of the International Workshop on Quality in
+  Databases (QDB)}, 2010.
+
+\bibitem[EIV07]{EIVe07}
+Ahmed~K. Elmagarmid, Panagiotis~G. Ipeirotis, and Vassilios~S. Verykios.
+\newblock {D}uplicate {R}ecord {D}etection: {A} {S}urvey.
+\newblock {\em IEEE Transactions on Knowledge and Data Engineering},
+  19(1):1--16, 2007.
+
+\bibitem[EVE02]{EVEl02}
+Mohamed~G. Elfeky, Vassilios~S. Verykios, and Ahmed~K. Elmagarmid.
+\newblock {T}ailor: {A} {R}ecord {L}inkage {T}ool {B}ox.
+\newblock In {\em Proceedings of the 18th International Conference on Data
+  Engineering}, ICDE ’02, pages 17--28. IEEE Computer Society, 2002.
+
+\bibitem[FS69]{FESU69}
+IvanP Fellegi and Alan~B. Sunter.
+\newblock {A} {T}heory for {R}ecord {L}inkage.
+\newblock {\em Journal of the American Statistical Association},
+  64(328):1183--1210, 1969.
+
+\bibitem[GMT07]{GMTs07}
+Aristides Gionis, Heikki Mannila, and Panayiotis Tsaparas.
+\newblock {C}lustering {A}ggregation.
+\newblock {\em ACM Transactions on Knowledge Discovery from Data}, 1(1), 2007.
+
+\bibitem[HS95]{HeSt95}
+Mauricio~A. Hernández and Salvatore~J. Stolfo.
+\newblock {T}he {M}erge/purge {P}roblem for {L}arge {D}atabases.
+\newblock {\em Proceedings of the 1995 ACM SIGMOD International Conference on
+  Management of Data}, 24(2):127--138, 1995.
+
+\bibitem[JIB10]{JIBi10}
+Anja Jentzsch, Robert Isele, and Christian Bizer.
+\newblock {S}ilk-{G}enerating {RDF} {L}inks while {P}ublishing or {C}onsuming
+  {L}inked {D}ata.
+\newblock In {\em Poster at the International Semantic Web Conference},
+  ISWC2010, 2010.
+
+\bibitem[JLX{\etalchar{+}}08]{JLX*08}
+Pawel Jurczyk, James~J. Lu, Li~Xiong, Janet~D. Cragan, and Adolfo Correa.
+\newblock {FRIL}: {A} {T}ool for {C}omparative {R}ecord {L}inkage.
+\newblock {\em Proceedings of AMIA Annual Symposium}, pages 440--444, 2008.
+
+\bibitem[KGMB{\etalchar{+}}06]{KGB*06}
+Hideki Kawai, Hector Garcia-Molina, Omar Benjelloun, David Menestrina, Euijong
+  Whang, and Heng Gong.
+\newblock {P}-{S}woosh: {P}arallel {A}lgorithm for {G}eneric {E}ntity
+  {R}esolution.
+\newblock Technical Report 2006-19, {Stanford InfoLab}, 2006.
+
+\bibitem[KIKK12]{KIK*12}
+Tomasz Kajdanowicz, Wojciech Indyk, Przemyslaw Kazienko, and Jakub Kukul.
+\newblock {C}omparison of the {E}fficiency of {M}ap{R}educe and {B}ulk
+  {S}ynchronous {P}arallel {A}pproaches to {L}arge {N}etwork {P}rocessing.
+\newblock {\em Proceedings of the 12th IEEE International Conference on Data
+  Mining Workshops}, 0:218--225, 2012.
+
+\bibitem[KKH{\etalchar{+}}10]{KKH*10}
+Toralf Kirsten, Lars Kolb, Michael Hartung, Anika Gross, Hanna Koepcke, and
+  Erhard Rahm.
+\newblock {D}ata {P}artitioning for {P}arallel {E}ntity {M}atching.
+\newblock {\em Proceedings of the 8th International Workshop on Quality in
+  Databases (QDB 2010)}, 2010.
+
+\bibitem[KKTR11]{KKT*11}
+Lars Kolb, Hanna Köpcke, Andreas Thor, and Erhard Rahm.
+\newblock {L}earning-based {E}ntity {R}esolution with {M}ap{R}educe.
+\newblock In {\em Proceedings of the third international workshop on Cloud data
+  management}, CloudDB ’11, pages 1--6. ACM, 2011.
+
+\bibitem[KL07]{KiLe07}
+Hung-sik Kim and Dongwon Lee.
+\newblock {P}arallel {L}inkage.
+\newblock In {\em Proceedings of the sixteenth ACM conference on Conference on
+  information and knowledge management}, CIKM ’07, pages 283--292. ACM, 2007.
+
+\bibitem[KM06]{KaMe06}
+Dmitri~V. Kalashnikov and Sharad Mehrotra.
+\newblock {D}omain-independent {D}ata {C}leaning via {A}nalysis of
+  {E}ntity-relationship {G}raph.
+\newblock {\em ACM Transactions on Database Systems}, 31(2):716--767, 2006.
+
+\bibitem[KMPG09]{KMP*09}
+Charalampos Konstantopoulos, Basilis Mamalis, Grammati Pantziou, and Damianos
+  Gavalas.
+\newblock {E}fficient {P}arallel {T}ext {R}etrieval {T}echniques on {B}ulk
+  {S}ynchronous {P}arallel ({BSP})/{C}oarse {G}rained {M}ulticomputers ({CGM}).
+\newblock {\em Journal of Supercomputing}, 48(3):286--318, 2009.
+
+\bibitem[KR08]{KoRa08}
+Hanna Koepcke and Erhard Rahm.
+\newblock {T}raining {S}election for {T}uning {E}ntity {M}atching.
+\newblock In {\em Proceedings of the International Workshop on Quality in
+  Databases and Management of Uncertain Data}, pages 3--12, 2008.
+
+\bibitem[KR10]{KoRa10}
+Hanna Koepcke and Erhard Rahm.
+\newblock {F}rameworks for {E}ntity {M}atching: {A} {C}omparison.
+\newblock {\em Data and Knowledge Engineering (DKE)}, 69(2):197--210, 2010.
+
+\bibitem[KTR12]{KTRa12}
+Lars Kolb, Andreas Thor, and Erhard Rahm.
+\newblock {M}ulti-pass {S}orted {N}eighborhood {B}locking with {M}ap{R}educe.
+\newblock {\em Computer Science - Research and Development}, 27(1):45--63,
+  2012.
+
+\bibitem[LCW07]{LCWe07}
+Luis Leitao, Pavel Calado, and Melanie Weis.
+\newblock {S}tructure-based {I}nference of {XML} {S}imilarity for {F}uzzy
+  {D}uplicate {D}etection.
+\newblock In {\em Proceedings of the sixteenth ACM conference on Conference on
+  information and knowledge management}, CIKM ’07, pages 293--302. ACM, 2007.
+
+\bibitem[MAB{\etalchar{+}}10]{MAB*10}
+Grzegorz Malewicz, Matthew~H. Austern, Aart~J.C Bik, James~C. Dehnert, Ilan
+  Horn, Naty Leiser, and Grzegorz Czajkowski.
+\newblock {P}regel: {A} {S}ystem for {L}arge-scale {G}raph {P}rocessing.
+\newblock In {\em Proceedings of the 2010 ACM SIGMOD International Conference
+  on Management of data}, SIGMOD ’10, pages 135--146. ACM, 2010.
+
+\bibitem[MNU00]{MNUn00}
+Andrew McCallum, Kamal Nigam, and Lyle~H. Ungar.
+\newblock {E}fficient {C}lustering of {H}igh-dimensional {D}ata {S}ets with
+  {A}pplication to {R}eference {M}atching.
+\newblock In {\em Proceedings of the sixth ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, KDD ’00, pages 169--178. ACM,
+  2000.
+
+\bibitem[NMMMBLP07]{NMM*07}
+Jordi Nin, Victor Muntes-Mulero, Norbert Martinez-Bazan, and Josep-L
+  Larriba-Pey.
+\newblock {O}n the {U}se of {S}emantic {B}locking {T}echniques for {D}ata
+  {C}leansing and {I}ntegration.
+\newblock In {\em Proceedings of the 11th International Database Engineering
+  and Applications Symposium}, IDEAS ’07, pages 190--198. IEEE Computer
+  Society, 2007.
+
+\bibitem[RDG11]{RDGa11}
+Vibhor Rastogi, Nilesh Dalvi, and Minos Garofalakis.
+\newblock {L}arge-scale {C}ollective {E}ntity {M}atching.
+\newblock {\em Proceedings of the VLDB Endowment}, 4(4):208--218, 2011.
+
+\bibitem[SB10]{SaBo10}
+Murat Sariyar and Andreas Bog.
+\newblock {T}he {R}ecord{L}inkage {P}ackage: {D}etecting {E}rrors in {D}ata.
+\newblock {\em The R Journal}, 2/2:61--67, 2010.
+
+\bibitem[SBB04]{SBBe04}
+Rainer Schnell, Tobias Bachteler, and Stefan Bender.
+\newblock {A} {T}oolbox for {R}ecord {L}inkage.
+\newblock {\em Austrian Journal of Statistics}, 33(1-2):125--133, 2004.
+
+\bibitem[SPY10]{SPYa10}
+Jimeng Sun, Spiros Papadimitriou, and Rong Yan.
+\newblock {L}arge-scale {D}ata {M}ining: {M}ap{R}educe and {B}eyond.
+\newblock In {\em The 16th ACM SIGKDD Conference on knowledge Discovery and
+  Data Mining}, 2010.
+
+\bibitem[SYK{\etalchar{+}}10]{SYK*10}
+Sangwon Seo, Edward~J. Yoon, Jaehong Kim, Seongwook Jin, Jin-Soo Kim, and
+  Seungryoul Maeng.
+\newblock {HAMA}: {A}n {E}fficient {M}atrix {C}omputation with the
+  {M}ap{R}educe {F}ramework.
+\newblock In {\em Proceedings of the 2010 IEEE Second International Conference
+  on Cloud Computing Technology and Science}, CLOUDCOM ’10, pages 721--726.
+  IEEE Computer Society, 2010.
+
+\bibitem[Tal11]{Talb11}
+John~R. Talburt.
+\newblock {\em {E}ntity {R}esolution and {I}nformation {Q}uality}.
+\newblock Morgan Kaufmann and Elsevier Science, 2011.
+
+\bibitem[TKM02]{TKMi02}
+Sheila Tejada, Craig~A. Knoblock, and Steven Minton.
+\newblock {L}earning {D}omain-independent {S}tring {T}ransformation {W}eights
+  for {H}igh {A}ccuracy {O}bject {I}dentification.
+\newblock In {\em Proceedings of the eighth ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, KDD ’02, pages 350--359. ACM,
+  2002.
+
+\bibitem[TR]{ThRa07}
+Andreas Thor and Erhard Rahm.
+\newblock {M}oma - {A} {M}apping-based {O}bject {M}atching {S}ystem.
+\newblock In {\em Third Biennial Conference on Innovative Data Systems
+  Research}.
+
+\bibitem[Val90]{Vali90}
+Leslie~G. Valiant.
+\newblock {A} {B}ridging {M}odel for {P}arallel {C}omputation.
+\newblock {\em Communications of the ACM (CACM)}, 33(8):103--111, 1990.
+
+\bibitem[Yan07]{Yanc07}
+William Yancey.
+\newblock {B}ig{M}atch: {A} {P}rogram for {E}xtracting {P}robable {M}atches
+  from a {L}arge {F}ile.
+\newblock Technical report, {US Census Bureau}, 2007.
+
+\bibitem[ZR05]{ZhRa05}
+Huimin Zhao and Sudha Ram.
+\newblock {E}ntity {I}dentification for {H}eterogeneous {D}atabase
+  {I}ntegration: {A} {M}ultiple {C}lassifier {S}ystem {A}pproach and
+  {E}mpirical {E}valuation.
+\newblock {\em Information Systems}, 30(2):119--132, 2005.
+
+\end{thebibliography}

@@ -1,0 +1,34 @@
+\chapter{Introduction}
+
+Data integration is the process of combining data from several disparate sources, and provide a unified view of the data. One form of data integration in which information related to the same real-world entity is merged is called entity-based data integration. In entity-based data integration, information referencing the same real-world entity need to be matched, therefore we have an entity matching problem. Entity matching have applications in many domains like national census, health sector, national security, crime and fraud detection, mailing lists, online shopping, social science and bibliographic databases\cite{Chri12}.
+
+When solving an entity matching problem, we face two challenges: \textit{identification} problem and \textit{disambiguation} problem. Identification problem is the problem of figuring out for each entity the set of different name references which may be used to refer to that entity\cite{BhGe07}. The disambiguation problem is the problem of distinguishing references that have similar and sometimes exactly the same name and yet refer to different underlying entities\cite{BhGe07}.
+
+The task of identifying and matching information that refer to the same entities within one or across several data sets is challenging for the reasons that can be highlights as following\cite{Chri12}:
+\begin{itemize}
+
+\item \textit{Lack of Unique Entity Identifiers}: Unique entity identifiers might be missing, and when available it might be subject to the lack of accuracy, completeness, robustness and consistency. If no identity identifiers are available in the data sets to be matched, then matching need to rely upon the attributes that are common across the data sets.
+
+\item \textit{Computation Complexity}: When matching entities in a single data set, each record potentially needs to be compared with all others. When matching two or more data sets, potentially each record needs to be compared with all records in the other data sets to determine if a pair of records belong to the same entity or not. The computation complexity grows quadratically as the databases to be matched get larger.
+
+\item \textit{Lack of Training Data and ground-truth}: In many cases, there is no ground-truth available, therefore the true status of two records that are matched across the data sets is not known. 
+\end{itemize} 
+
+Entity matching is an old problem that appears in many domains. It has different names in literature, it is known as \textit{record linkage} and \textit{record matching} in the statistics community, in database community this problem is described as \textit{merge-purge}, \textit{data deduplication} and \textit{instance identification}, in the AI community, the same problem is described as \textit{database hardening} and \textit{name matching}, the names \textit{conference resolution}, \textit{identity uncertainly} and \textit{duplicate detection} are also commonly used to describe the same problem. We will use the term entity matching through the thesis.
+
+
+\section {Motivation}
+Many approaches and methods have been proposed to solve the entity matching problem, one of these methods is the collective relational entity matching. The collective relational entity matching take into consideration the relationship between entities to solve the matching problem collectively which lead to better matching quality.
+However, integrating large data sets using collective relational entity matching is a challenging tasks due to the complexity of the search space. The  emerging of the cloud computing and its capability to process the large volume of data lead to the development of entity matching frameworks that use computational power of the cloud machines to process the entity matching tasks more efficiently. Most of the cloud-based development efforts use the MapReduce model to implement a distributed cloud-based frameworks. However for the collective relational entity matching, MapReduce is not the perfect choice since MapReduce does not excel in iterative graph-based processing.
+
+Our idea is to develop a cloud-based large data set integration framework based on collective relational entity matching approach. We will use Pregel, a cloud-based graph-oriented model that better fits to our graph-based problem. We expect to have the good matching quality of collective relational entity matching and the efficiency of cloud-based frameworks. As far as we know, no previous work is done in this direction. 
+ 
+We will test our framework in the context of AERCS (Academic Event Recommender system for Computer Scientists) project\footnote{\url{http://bosch.informatik.rwth-aachen.de:5080/AERCS}} that is developed and currently hosted by the Chair of Information Systems\footnote{\url{http://dbis.rwth-aachen.de/cms}}. In this project, large-scale bibliographical data sets need to be integrated. Based on the integrated data from the DBLP\footnote{\url{http://dblp.uni-trier.de/}} and CiteSeerX\footnote{\url{http://citeseerx.ist.psu.edu/}} data sets.
+
+\section{Thesis Goals}
+\begin{itemize}
+\item Build a cloud-based framework that implements the different stages of the entity matching on the cloud.
+\item Extend the collective relational entity matching to large-scale data sets by implementing it on cloud.
+\item Modify the collective relational clustering algorithm to a vertex-oriented algorithm that is suitable to be executed on Pregel
+\item Evaluate the effectiveness and efficiency of the new algorithms using the i5Cloud as testbed and DBLP and CiteSeerX as test data sets.
+\end{itemize}

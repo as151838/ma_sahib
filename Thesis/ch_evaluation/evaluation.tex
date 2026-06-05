@@ -1,0 +1,53 @@
+\chapter{Evaluation}
+In this chapter we describe our evaluation plan. We give an overview of the quality measures, detailed evaluation plans and finally we give an overview of the data sets that we use in the evaluation.
+
+\section{Measuring Matching Quality}
+Evaluation of entity matching quality requires ground-truth data sets. By comparing the entity matcher decisions against the ground-truth data set, each matched record falls into one of the following four categories\cite{Chri12}:
+\begin{itemize}
+\item \textit{True positives(TP)}: These are the record pairs that have been decided as matches and that are true matches. These are the pairs where both records refer to the same entity.
+\item \textit{False positives(FP)}: These are the record pairs that have been decided as matches, but they are not true matches. The two records in these pairs refer to two different entities. The matcher has made a wrong decision with these record pairs. These pairs are also known as false matches.
+\item \textit{True negatives(TN)}: These are the record pairs that have been decided as non-matches, and they are true non-matches. The two records in pairs in this category do refer to two different real-world entities.
+\item \textit{False negatives(FN)}: These are the record pairs that have been decided as non-matches, but they are actually true matches. The two records in these pairs refer to the same entity. The matcher has made a wrong decision with these record pairs. These pairs are also known as false non-matches.
+\end{itemize}
+Based on the number of true positives (TP), true negatives (TN), false positives (FP) and false negatives (FN), different quality measures can be calculated \cite{Chri12}.
+
+\subsubsection{Accuracy}
+This quality measure is calculated as:
+$$ acc=\frac{TP+TN}{TP+FP+TN+FN}$$
+Accuracy is mainly useful for situations where the number of instances (record pairs in the case of data matching) are more or less the same for both the matches and the non-matches. 
+
+This accuracy measure is not suitable to properly assess matching quality since the no of matched records are rare in data matching and deduplication since the majority of record pairs corresponds to true non-matches (true negatives). As a result, the value of TN dominates the calculation of accuracy.
+\subsubsection{Precision}
+This is a measure commonly used in information retrieval to assess the quality of search results. It is calculated as:
+$$ prec=\frac{TP}{TP+FP}$$
+Because precision does not include the number of true negatives, it does not suffer from the problem that the accuracy measure does. Precision calculates the proportion of how many of the decided matches (TP + FP) have been correctly decided as true matches (TP). It thus measures how precise a matcher is in deciding true matches.
+\subsubsection{Recall}
+This is a second measure that is commonly used in information retrieval. It is calculated as:
+$$ rec=\frac{TP}{TP+FN}$$
+Similar to precision, because recall does not include the number of true negatives, this measure does not suffer from the problem that the accuracy measure does. It measures the proportion of true matches (TP + FN) that have been decided correctly (TP). It thus measures how many of the actual true matching record pairs have been correctly decided as matches.
+\subsubsection{F-measure}
+This measure, also known as \textit{f-score} or \textit{f1-score}, calculates the harmonic mean between precision and recall:
+$$ fmeas=2 \times \frac{prec\times rec}{prec+rec}$$
+The f-measure combines precision and recall and only has a high value if both precision and recall are high. Aiming to achieve a high f-measure requires to find the best compromise between precision and recall.
+
+\section{Measuring Framework Efficiency}
+Average Message Transferred
+Communication Complexity: The communication complexity, denotes the communication cost,i. e., the total number of bits exchanged in all messages across the machines during a computation\cite{WoZh13}.
+Round Complexity: The round complexity refers to the number of communication rounds needed for the computation, given various constraints on what messages can be sent by each machine in each round\cite{WoZh13}.
+\section{Evaluation Plan} 
+We evaluate our framework by measuring its entity matching quality as well as its efficiency and scalability. We plan to evaluate the framework using using three evaluation data sets. 
+\begin{itemize}
+
+\item The first evaluation data sets is a small subset of the DBLP and CiteSeerX data sets where we already knows the ground truth of this subset. We modify the subset according to pre-defined scenarios to study our algorithms ability to handle these scenarios. 
+
+\item The second evaluation data set is a small data set offered in Maryland university computer science web page\footnote{\url{http://www.cs.umd.edu/projects/linqs/projects/er/index.html}}. Its small subset of CiteSeerX with ground truth. it contains 1,504 machine learning documents with 2,892 author references to 1,165 author entities.
+
+\item The third evaluation data sets are the complete data sets of DBLP and CiteSeerX. With these data sets we evaluate the scalability and overall matching quality of our framework.
+\end{itemize}
+\section{Test Data Sets}
+\subsubsection{DBLP}
+
+DBLP (Digital Bibliography and Library Project) is online database containing computer science journals and conference and workshop proceedings. It started as small experimental Web server in 1993 at the university of Trier. it evolved from a small bibliography specialized to database systems and logic programming to digital library covering most subfields of computer science.
+
+\subsubsection{CiteSeerX}
+CiteSeerX is an autonomous citation indexing system that focuses on the literature in the fields of computer and information science. it crawl a large number of scientific publications from the web to extract their citation list to construct a database of papers linked by the citation relation. However there are often multiple references to the same paper, authors are not always correctly identified and citations are not always resolved. 

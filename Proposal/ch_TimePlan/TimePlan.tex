@@ -1,0 +1,96 @@
+\chapter{Time Plan}
+The proposed time plan \ref{tbl:timePlan} shows the expected time dedicated for each phase of the master degree thesis work. Data preparation phase is the first phase, its planned to take 1 week. In this phase we study and prepare the data with some analysis. Then we develop a prototype that is based on the original collective relational entity matching approach, We use this prototype to generate the results expected when using this approach and compare the results of our algorithms to the prototype results. The algorithms development and evaluation takes the major time of the thesis work, its planned to take total of 16 weeks. In this phase we have 3 sub-phases corresponding to the 3 stages of the i5CloudMatch framework, which are blocking, distribution and matching stages. In these sub-phases the development and evaluation overlap in the time plan since they are going hand in hand. The blocking sub-phase is planned to take a total of 3 weeks. The Distribution sub-phase is planned to take another 3 weeks and the matching sub-phase is planned to take a total of 8 weeks. After that we develop, evaluate and tune the framework, this is planned to take a total of 5 weeks. Thesis writing is ongoing phase that goes on along with the other phases.
+The detailed steps of our implementation and evaluation plan are in following sequence:
+\begin{itemize}
+\item We develop a java program to run on single machine as a prototype. The prototype logs its execution steps to be used as reference of the expected behavior. this program implements the original collective relational entity matching approach (We refer to the available code in c++ for details)
+\item We test the program using the small CiteSeerX data set, we should get the same results reported by the Bhattacharya and Getoor paper \cite{BhGe07}.
+\item We try to run the program using the data sets of DBLP and CiteSeerX used by the AERCS system to compare the results with the AERCS results (expected to take very long execution time).
+\item We develop the blocking component using the MapReduce programming model.
+\item We compare and evaluate the blocking component results with the results of the prototype.
+\item We evaluate the scalability of the blocking component by running the component on the cloud.
+\item We develop the distribution component.
+\item We evaluate the efficiency and effectiveness of the distribution component by running the component on the cloud.
+\item We develop the matching component using BSP Pregel programming model.
+\item We test the matching component by running it with data corresponding to predefined scenarios
+\item We compare the matching component behavior against the prototype behavior.
+\item We evaluate the matching component results using the small CiteSeerX data set and compare the results with the prototype results.
+\item We evaluate the scalibility of the matching component by running the component on the cloud using the complete data sets of DBLP and CiteSeerX, we compare the efficiency and effectiveness of the component against the AERCS system. 
+\end{itemize}
+
+\begin{sidewaystable}
+\caption{Proposed Time Plan}
+\centering % used for centering table
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|*{28}{c|}}
+  \hline
+   Phase									&	sub-phase				 &
+   \multicolumn{4}{|c|}{Jul} & 
+   \multicolumn{4}{|c|}{Aug} & 
+   \multicolumn{4}{|c|}{Sep} & 
+   \multicolumn{4}{|c|}{Oct} & 
+   \multicolumn{4}{|c|}{Nov} & 
+   \multicolumn{4}{|c|}{Dec} &
+   \multicolumn{4}{|c|}{Jan} \\ [0.01ex]
+   \hline
+   Literature review						&								&
+    \f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&  &  &\\ [0.01ex] \hline
+
+   Data preparation						&								&
+      &\f&  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ [0.01ex] \hline
+   Prototype dev.						&								&
+      &  &\f&\f&  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ [0.01ex] \hline
+       %-----------------------  Blocking alg.---------------------------
+   Algorithms dev. 								&	Blocking alg.		&		 
+      &  &  &  &\f&\f&\f&  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ [0.01ex] 
+   \& eval.										&	dev.		 		&		 
+      &  &  &  &\f&\f&\f&  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ [0.01ex] \hline 
+   												&	Blocking alg.		&		 
+      &  &  &  &  &\f&\f&  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ [0.01ex] 
+   											&	eval.(machine)		&		 
+      &  &  &  &  &\f&\f&  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ [0.01ex] \hline
+   												&	Blocking alg.		&		 
+      &  &  &  &  &\f&\f&  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ [0.01ex] 
+   											&	eval.(cloud)		&		 
+      &  &  &  &  &\f&\f&  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ [0.01ex] \hline 
+
+    %-----------------------  Distribution alg.---------------------------
+   Algorithms dev.								&	Distribution alg.		&		 
+      &  &  &  &  &  &  &\f&\f&\f&  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ [0.01ex] 
+   \& eval.										&	dev.		 		&		 
+      &  &  &  &  &  &  &\f&\f&\f&  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ [0.01ex] \hline 
+   												&	Distribution alg.		&		 
+      &  &  &  &  &  &  &  &\f&\f&  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ [0.01ex] 
+   											&	eval.(machine)		&		 
+      &  &  &  &  &  &  &  &\f&\f&  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ [0.01ex] \hline 
+   												&	Distribution alg.		&		 
+      &  &  &  &  &  &  &  &\f&\f&  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ [0.01ex] 
+   											&	eval.(cloud)		&		 
+      &  &  &  &  &  &  &  &\f&\f&  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\\ [0.01ex] \hline
+    %-----------------------  Matching alg.---------------------------
+   Algorithms dev.								&	Matching alg.		&		 
+      &  &  &  &  &  &  &  &  &  &\f&\f&\f&\f&\f&\f&\f&\f&  &  &  &  &  &  &  &  &  &\\ [0.01ex] 
+   \& eval										&	dev.		 		&		 
+      &  &  &  &  &  &  &  &  &  &\f&\f&\f&\f&\f&\f&\f&\f&  &  &  &  &  &  &  &  &  &\\ [0.01ex] \hline 
+   												&	Matching alg.		&		 
+      &  &  &  &  &  &  &  &  &  &  &  &\f&\f&\f&\f&\f&\f&  &  &  &  &  &  &  &  &  &\\ [0.01ex] 
+   											&	eval.(machine)		&		 
+      &  &  &  &  &  &  &  &  &  &  &  &\f&\f&\f&\f&\f&\f&  &  &  &  &  &  &  &  &  &\\ [0.01ex] \hline 
+   												&	Matching alg.		&		 
+      &  &  &  &  &  &  &  &  &  &  &  &\f&\f&\f&\f&\f&\f&  &  &  &  &  &  &  &  &  &\\ [0.01ex] 
+   											&	eval.(cloud)		&		 
+      &  &  &  &  &  &  &  &  &  &  &  &\f&\f&\f&\f&\f&\f&  &  &  &  &  &  &  &  &  &\\ [0.01ex] \hline 
+  Framework dev.  									&			&		 
+      &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\f&\f&\f&\f&  &  &  &  &  &\\ [0.01ex] \hline  
+  Framework eval.  									&			&		 
+      &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\f&\f&  &  &  &  &  &\\ [0.01ex] \hline 
+  Framework tuning  									&			&		 
+      &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &\f&  &  &  &  &  &\\ [0.01ex] \hline 
+  Thesis writing  									&			&		 
+    \f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&\f&  &  &\\ [0.01ex] \hline 
+       
+      
+
+\end{tabular}
+\label{tbl:timePlan}
+\end{sidewaystable}
+
+  

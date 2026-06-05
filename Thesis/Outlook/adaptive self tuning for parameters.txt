@@ -1,0 +1,4 @@
+Knowledge propagation
+Vertex 
+use betweeness: vertex with high betweeness knows more, have high voice
+use degree: when degree is small bias to Attribute similarity, when its high, bias to relational similarity

@@ -1,0 +1,221 @@
+\chapter{State Of The Art}
+
+In this chapter we review state of the art of entity matching systems and frameworks. Koepcke and Rahm \cite{KoRa10} comparatively analyze 11 machine learning frameworks for entity matching (see Table \ref{table:MLEMframeworks}). We give another review of some existing systems and frameworks of entity matching\cite{Chri12}, then we give an overview of the existing cloud-based frameworks
+
+\section {Entity Matching Systems and Frameworks}
+There are several high-level requirements that should be satisfied as far as possible by entity matching systems. These requirements are:
+
+\begin{itemize}
+\item \textit{Effectiveness} is the main goal of entity matching. \textit{Effectiveness} is considered with achieving high quality results, however achieving this goal for different matching tasks typically requires combination of different match methods. 
+
+\item \textit{Efficiency} is another requirement that is important when handling large data set. The entity matching system should be fast even for large data sets. To reach good efficiency, blocking methods are usually implement as the basic techniques to reduce the search space and thus reduce the total time needed for the matching task. 
+
+\item \textit{offline/online matching} might be also a requirement to have a system that is applicable of offline and online tasks. However according to Koepcke and Rahm \cite{KoRa10} all the existed frameworks are offine entity matching frameworks. 
+
+\item \textit{Genericity} refers to system's applicability of different match tasks from different data models. Most existing Entity matching systems are capable of matching relational data only. Only one framework is found to work with XML data. 
+
+\item  The manual efforts to employ an entity matching system should be as low as possible, particularly for selecting the matching and blocking methods and their parameters. Ideally the system should be able to handle these tasks automatically by \textit{self-tunning} with the help of machine learning methods that utilize data training. 
+\end{itemize}
+
+We give an overview from Christen \cite{Chri12}. This overview summarize some of the entity matching systems that have mostly been developed by researchers as part of their work. Some of these systems include graphical user interfaces, while others are more basic research prototypes with program codes only.
+
+\begin{itemize}
+
+% BigMatch
+\item BigMatch\cite{Yanc07}, developed and used by the US Census Bureau,  is used to match very large census data collections. Parallel versions of BigMatch have been developed to be used for large data matching tasks. The idea that is implemented in the parallel version of BigMatch is based on loading and process the smaller of the databases to the memory and represented by an inverted-index data structure. Then the indexing step is carried out by single scanning the larger database using different blocking criteria resulting into smaller size database. After that more detailed matching is carried out between the smaller database that resides in memory and the generated indexed database. The matching is conducted using a standard blocking approach. Several blocking criteria can also be applied. The program does not provide graphical user interface, rather it is controlled using text based configuration files. The input files are assumed to be flat text files with fixed record length.
+
+
+% D-Dupe
+\item D-Dupe\cite{BLG*06} is a graphical tool that allows interactive exploration of networks that contain duplicates. It combines data matching algorithms with network visualization to improve the efficiency of the interactive deduplication conducted by the user. D-Dupe implements many strings comparison functions like Jaro, Jacard and Monge-Elkan. In addition to that, D-Dupe considers the relational similarities in the network by calculating similarities based on the overlap of their common neighboring entities. Standard blocking is also implemented to narrow down the search of duplicates.   
+
+%DuDe
+\item DuDe\cite{DrNa10} (Duplicate Detection) is a Java toolkit developed at the University of Potsdam. It contains several modules that offer application programming interfaces (API) to be used by the programmer. The first module is the ‘preprocessor’ module. This module is optional and it provides statistics about the input data sets to be matched. The second module is the ‘Algorithm’ module, which is the main module that contains various type of comparison functions as well as functions that aggregate similarity values. The third module is the ‘postprocessor’ module that allows transitive closure calculation as well as providing various statistics. Finaly ‘DuDeOutput’ module provides functions to write the resulted matched data in various formats.
+DuDe can handle the input and the output in various formats. It can read input files of the formats of CSV files. XML documents, JSON files and bibliographies in Bibtex format. The output can be generated using the formats of CSV files and JSON files.
+The programmer need to program java programs that configures the data access method, the algorithms to use for indexing, attribute similarity comparisons, classification, and evaluation.
+
+%FEBRL
+\item FEBRL\cite{Chri08} (Freely Extensible Biomedical Record Linkage) system provides techniques for improved data pre-processing, deduplication and data matching. It contains rich modules for data pre-processing, indexing, comparisons, classifications and evaluations. The data-preprocessing implements rules and hidden Markov models techniques, indexing implements 7 indexing and 8 phonetic encoding techniques, comparisons offers 26 different comparison functions and classification offers 6 different classifiers.
+
+FEBRL comes with GUI as well as the ability for rapid development and testing of new algorithms. It can read data of various formats like CSV, TAB and COL formats with optional modules for database access. It also have support for parallel computing that is based on the Message Passing Interface(MPI).
+
+%FRIL
+\item FRIL\cite{JLX*08} (Fine-Grained Records Integration and Linkage) is a system for schema reconciliation and data matching. It contains several indexing methods and a variety if comparison functions. It offers parameter tuning approach that is based on Expectation maximization (EM) approach. It contains GUI that allows users to select parameters such that matching fields, comparison functions, matching weights, indexing functions, and evaluation metrics to apply. Analysis window is provided to the user that allows the inspection of the effectiveness of the parameters on the matching process prior to running the actual matching on the full data sets.
+ 
+FRIL supports parallelization on multi-core systems in a way that is transparent to the user, that is if FRIL detects multi-core systems then it will run algorithms in parallel.
+
+%Merge Toolbox
+\item ‘Merge Toolbox’ (MTB)\cite{SBBe04} is a java program that implements both probabilistic and distance-based dedeuplication and data matching. It implements a variety of comparison and German phonetic encoding functions. It also implements standards blocking techniques. For probabilistic data matching, the parameters can either be set manually or by using the EM algorithm.
+
+The MTB can handle input files of the format of CSV, it also allows access to SATA text files.It offers the ability of privacy-preserving data matching by using the hah-encoded Bloom filters.
+
+%OYSTER
+\item OYSTER (Open YSTem Entity Resolution)\cite{Talb11} systems offer modules for probabilistic matching, finding transitive closure of matched record sets, and indexing. It can be run in several modes to conduct operations like data matching/merge-purge, identity capture, and identity resolution. The core of the OYSTER is based on the R-Swoosh algorithm .
+OYSTER uses XML scripts customized by  the user to define entity attributes, the table layout of the data sources and identity rules for resolving reference sources.
+
+
+%R RecordLinkage
+\item ‘RecordLinkage’ \cite{SaBo10} is collection of scripts written in the R statistical languages. It allows the deduplication of one data set or the matching of two data sets. It includes functions for standard blocking, and several probabilistic matching approaches combined by a facility for parameter estimation using the EM algorithm. It support supervised and unsupervised classification techniques.
+
+% SecondString
+\item SecondString toolkit\cite{CRFi03} is a set of java classes. It implements many approximate string comparison functions as well as the implementation of the SoftTFIDF and the Monge-Elkan multi-word comparision function.it also implement a combined adaptive string distance learner.
+
+% SILK
+\item SILK\cite{JIBi10} is a system that allows the discovery of relationships in data within the Linked data framework. SILK assumes that data to be represented as RDF (Resource Description Framework) tuples. It contains indexing and approximate string comparison functions. It uses the string comparison module of FEBRL system. SILK facilates parallel execution using the MapReduce framework.
+
+% SimMetrics
+\item SimMetrics is java Package containing large number of approximate string comparison functions. It also includes several functions that are more suitable for comparing long sequences (like genome sequences), such as the Needleman–Wunsch, Smith– Waterman–Gotoh, and the Smith–Waterman algorithms.
+
+% TAILOR
+\item Tailor (RecOrd LinkAge Toolbox)\cite{EVEl02} toolbox allows different indexing, comparison and classification techniques. it implements standard blocking and the sorted neighborhood approach. It also provides evaluation methods. It offers both clustering and classification techniques. users can interact with TAILOR either through a definition language or via GUI.
+
+% WHIRL
+% AERCS
+\item AERCS (Academic Event Recommender system for Computer Scientists)\footnote{\url{http://bosch.informatik.rwth-aachen.de:5080/AERCS}} is a visualization tool for communities of academic event in Computer Science. The system is developed and currently hosted by the Chair of Information System\footnote{\url{http://dbis.rwth-aachen.de/cms}} , RWTH Aachen University, Germany.  
+
+The system provides the functionality of browsing a list of conferences series and selecting a particular series to see the detail analysis and visualization of the community. Each series and conference has its own page which provides more detail information. Each author also has a page which list all conferences he/she has attended and a visualization of his/her research community. Users can also search conferences, series, or author by name.
+
+Currently, co-authorship network of conferences and series from the combination of DBLP\footnote{\url{http://dblp.uni-trier.de/}} and CiteSeerX digital libraries dataset are visualized. 
+
+%GeRoMeSuite
+\item GeRoMeSuite\footnote{\url{http://dbis.rwth-aachen.de/cms/projects/GeRoMeSuite} accessed at 27.6.2013} is a generic model management framework that enables managing models in a polymorphic fashion. It provides an environment that simplifies the implementation of model management operators like Match, Merge, and Compose. it represents the different modeling languages (such as XML Schema, OWL, SQL) in a generic way using the metamodel GeRoMe. The framework supports schema integration using simple morphisms and structured intensional mappings. GeRoMeSuite provides a workspace to manage and map models and supports importing SQL, XML Schema and OWL models.
+\end{itemize}
+
+\section{Parallel/Distributed Entity Matching}
+As data sets today are getting larger, entity-based integration of them requires more computing power and storage resources. Modern Parallel/Distributed computing environments were implemented to reduce the time required to match large-scale data sets. We give an overview of some of the existing Parallel/Distributed entity matching frameworks\cite{Chri12}.
+
+\begin{itemize}
+
+\item Hernandez and Stolfo \cite{HeSt95} presented a parallel version of their sorted neighborhood indexing approach. This parallel version was implemented on parallel machine where memory was not shared between processors. the implementation is based on a master-work approach where the master process distributes the data set, and the worker processes sort their subset of the data, and finally the master process joins the sorted subsets.
+
+\item Christen et al.\cite{CCHe04} described a system that employs the Message Passing Interface (MPI) library for communication between processors. Each processor has access to its memory and storage.
+
+\item Benjelloun et al.\cite{BGG*07} proposed D-Swoosh algorithms that facilitate distributed data matching. The algorithms are based on Swoosh algorithm. Each processor runs the R-Swoosh algorithm on its subset of the data, and each matched set of records is communicated to all processors that hold a record that is affected by a merge.
+
+\item Kawai et al. \cite{KGB*06} implemented P-Swoosh algorithm that is based on master-worker approach of D-Swoosh. They explored different ways of how to distribute matching record sets. Two different load balancing techniques were investigated, one with a static distribution and the other with an adaptive distribution.
+
+\item Kim and Lee \cite{KiLe07} investigated different approaches to match and merge data sets that are either clean (i.e. the two source data sets do not contain duplicate records) or dirty (i.e. the source data sets can contain duplicate records). The general idea of their approach is that the smaller of the two data sets to be matched, is replicated on each processor. The larger data set, is however distributed.
+
+\item Kirsten et al.\cite{KKH*10} proposed different strategies of how to distribute data to generate independent matching tasks that can be executed on different processors. The proposed strategies aims to set the number of partitions and their sizes in an optimal way with regard to both communication overhead and memory requirements.
+
+\end{itemize}
+
+\section{Cloud-based Entity Matching}
+In this section we give a review of the existing cloud-based entity matching frameworks. All of the reviewed frameworks are using the MapReduce programming model for distribution of the tasks.
+\begin{itemize}
+
+\item Dal Bianco et al.\cite{DGHe11} proposed a data parallelism approach for multi-core computing platforms based on the MapReduce programming model. They proposed an efficient indexing approach based on standard blocking that, similar to the approach presented by Kirsten et al. above.
+
+\item Kolb et al. \cite{KTRa12} proposed a similar approach to parallel data matching also based on the MapReduce programming model. They developed two efficient parallel variations of the sorted neighborhood indexing technique. In the first approach, multiple Map-Reduce processes are employed, while the second approach employed a tailored data replication to improve performance. A pre-processing step was applied on the data to be matched that calculates a matrix that contains information about how many entities are given per blocking key. Based on this information an efficient load balancing of entities onto processors can be achieved.
+
+\item Rastogi et al. \cite{RDGa11} proposed a framework to improve the scalability of collective matching techniques by running a collective matching process many times on small subsets of data set that are in the same neighborhood of the data. These independent collective matching instances exchange messages about the local matches found, and the results of all matching instances are combined into a final overall solution. They reported the use of MapReduce to achieve parallelism.
+
+\item Kolb et al. \cite{KKT*11} investigates how learning based entity resolution can be realized in a cloud infrastructure using MapReduce. They proposed and evaluated two MapReduce-based strategies for pair-wise similarity computation and classifier application on the Cartesian product of two input sources.
+
+\item Kolb et al. \cite{KTRa12} introduced Dedoop, a MapReduce-based entity matching framework for large data sets. Dedoop supports a browser-based specification of complex work flows including blocking and matching steps as well as the optional use of machine learning for the automatic generation of match classifiers.
+\end{itemize}
+\section{Summary}
+In this chapter we reviewed a lot of frameworks that use different approaches. Many frameworks use machine learning techniques with data training to solve the entity matching problem (see Table \ref{table:MLEMframeworks}), We note in Table \ref{table:MLEMframeworks} that no system satisfies all the requirements. In fact some of the posed requirements are in conflict with each other, for example the use of blocking methods improves efficiency but effects the effectiveness, combining several matching methods may improve the effectiveness but it effects the efficiency. In addition to that, these systems can not scale well for large data sets.
+ 
+In Table \ref{table:EMframeworks} we can see other entity matching frameworks. Some of them are systems with graphical user interface and parameter tuning, and some others are just libraries with no graphical user interface. just half of the frameworks have support for the parallel/distributed entity matching. Database access is rarely supported by these frameworks and only few of them provide application programming interface (API).
+
+We also reviewed some parallel/distributed entity matching frameworks. Some of them use message passing interface (MPI) and others use the MapReduce programming model to implement the framework on the cloud. However we were unable to find cloud-based frameworks that use the bulk synchronous parallel (BSP) programming model and its graph-based Pregel programming model.
+
+In this thesis work, we develop a cloud-based entity matching framework based on the collective relational entity matching approach. We view the entity matching problem as graph-based clustering problem and use Pregel programming model to implement the graph-based clustering algorithm. To the best of our knowledge no previous work was done with such direction. Our framework enhance both the Effectiveness and Efficiency in terms of quality and scalability. In addition to that, our framework provides graphical user interface, take into consideration the relations between entities, supports different input formats like CSV and XML, supports database access, provides application programming interface (API) and supports both merging and deduplication. 
+
+
+%---------- Table 1 (table:MLEMframeworks):Overview of machine learning entity matching frameworks
+\begin{sidewaystable}[h]
+\caption{Overview of machine learning entity matching frameworks(constructed from \cite{KoRa10}})
+\centering % 
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|} % centered columns (4 columns)
+\hline\hline %inserts double horizontal lines
+% Columns headers
+System	&	Training	&	Entity	&	Disjoint	&	overlaping	&	Matchers	&	Matcher	&	Learners	&	Training	\\ [0.1ex]
+	&	based	&	type	&	partitioning	&	partitioning	&		&	combination	&		&	selection	\\ [0.1ex]
+\hline % inserts single horizontal line
+\hline %inserts single line
+% Data
+BN \cite{LCWe07}	&		&	XML	&		&		&	Attribute, 	&	Numerical	&		&		\\ [0.1ex]
+	&		&		&		&		&	Context	&		&		&		\\ [0.1ex]
+\hline																	
+ MOMA \cite{ThRa07}	&		&	Relational	&		&		&	Attribute, 	&	 Workflow	&		&		\\ [0.1ex]
+	&		&		&		&		&	Context	&		&		&		\\ [0.1ex]
+\hline																	
+SERF \cite{BGM*09}	&		&	Relational	&		&		&	Attribute 	&	Rules 	&		&		\\ [0.1ex]
+\hline																	
+Active Atlas \cite{TKMi02}	&	Yes	&	Relational	&		&	Hashing	&	Attribute 	&	Rules 	&	Decision tree	&	Manual, 	\\ [0.1ex]
+	&		&		&		&		&		&		&		&	semi-automatic	\\ [0.1ex]
+\hline																	
+MARLIN \cite{BiMo03}	&	Yes	&	Relational	&		&	Canopy	&	Attribute 	&	Numerical,	&	SVM, 	&	Manual, 	\\ [0.1ex]
+	&		&		&		&		&		&	rules	&	decision tree	&	semi-automatic	\\ [0.1ex]
+\hline																	
+ Multiple Classifier	&	Yes	&	Relational	&	?	&	?	&		&	Numerical,	&	7 (SVM, 	&	Manual	\\ [0.1ex]
+System \cite{ZhRa05}	&		&		&		&		&		&	rules	&	decision tree, etc.)	&		\\ [0.1ex]
+\hline																	
+Operator \cite{CCG*07}	&	Yes	&	Relational	&		&	Canopy	&	Attribute 	&	Rules 	&	Operator Tree 	&	Manual	\\ [0.1ex]
+	&		&		&		&		&		&		&	algorithm, SVM	&	Manual	\\ [0.1ex]
+\hline																	
+TAILOR \cite{EVEl02}	&	Yes	&	Relational	&	sorting, 	&	sorted 	&	Attribute 	&	Numerical, 	&	Probabilistic,	&	Manual	\\ [0.1ex]
+	&		&		&	hashing	&	neighborhood	&		&	rules	&	decision tree	&		\\ [0.1ex]
+\hline																	
+FEBRL  \cite{Chri08}	&	 Yes	&	Relational	&	Threshold	&	neighborhood,	&	Attribute 	&	Numerical	&	SVM	&	Manual, 	\\ [0.1ex]
+	&		&		&		&	q-qram,	&		&		&		&	automatic	\\ [0.1ex]
+	&		&		&		&	Canopy	&		&		&		&		\\ [0.1ex]
+\hline																	
+STEM \cite{KoRa08}	&	 Yes	&	Relational	&		&	sorted	&	Attribute 	&	Numerical,	&	 SVM, decision tree, 	&	 Manual, 	\\ [0.1ex]
+	&		&		&		&	neighborhood	&		&	rules	&	learning logistic  	&	semi-	\\ [0.1ex]
+	&		&		&		&		&		&		&	regression, multiple	&	automatic	\\ [0.1ex]
+\hline																	
+ Context Based 	&	 Yes	&	Relational	&		&	Canopy	&	Attribute 	&	Numerical,	&	Diverse (SMOreg, 	&	Manual	\\ [0.1ex]
+Framework\cite{CKMe09}	&		&		&		&		&	Context	&	rules	&	Logistic, etc.)	&		\\ [0.1ex]
+\hline 
+\end{tabular}
+\label{table:MLEMframeworks} % is used to refer this table in the text
+\end{sidewaystable}
+
+%----------- Table 2(table:EMframeworks):Overview of entity matching systems and frameworks------------
+\begin{sidewaystable}[h]
+\caption{Overview of entity matching systems and frameworks} 	
+\centering % used for centering table
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|} 
+\hline\hline 
+% Columns Headers
+System & Parallel/   & GUI & Relational & Input  & API & Database & Parameter & Deduplication & Merging \\ [0.1ex] 
+       & Distributed &     &            & Format &     & Access   & tuning    &               &         \\ [0.1ex]
+\hline 
+BigMatch\cite{Yanc07} 		& \cmark & \xmark & \xmark & flat file    & \xmark & \xmark & \xmark & ? & ? \\ [1ex]  
+\hline
+D-Dupe\cite{BLG*06}   		& \xmark & \cmark & \cmark & ?            & \xmark & \xmark & \xmark & ? & ? \\ [1ex]  
+\hline
+DuDe\cite{DrNa10}     		& \xmark & \xmark & \xmark & XML,CSV,JSON & \cmark & \xmark & \xmark & ? & ? \\ [1ex]  
+\hline
+FEBRL\cite{Chri08}    		& \cmark & \cmark & \xmark & CSV,TAB,COL  & \cmark & \cmark & \xmark & ? & ? \\ [1ex]  
+\hline
+FRIL\cite{JLX*08}    		& \cmark & \cmark & \xmark & ?            & \xmark & \xmark & \cmark & ? & ? \\ [1ex]  
+\hline
+Merge toolbox\cite{SBBe04} 	& \xmark & \cmark & \xmark & CSV          & \xmark & \xmark & \cmark & ? & ? \\ [1ex]
+\hline
+OYSTER\cite{Talb11}         & \xmark & \xmark & \xmark & ?            & \xmark & \xmark & \xmark & ? & ? \\ [1ex] 
+\hline
+R Record Linkage\cite{SaBo10}& \xmark & ?      & \xmark & ?            & \xmark & \xmark & \cmark & \cmark & \cmark \\ [1ex]
+\hline 
+SecondString\cite{CRFi03}   & \xmark & \xmark & \xmark & ?            & \xmark & \xmark & \xmark & ? & ? \\ [1ex]
+\hline
+SILK\cite{JIBi10}           & \cmark & \xmark & \cmark & RDF          & \xmark & \xmark & \xmark & ? & ? \\ [1ex]  
+\hline
+Simmetrics       			& \xmark & \xmark & \xmark & ?            & \xmark & \xmark & \xmark & ? & ? \\ [1ex]  
+\hline
+TAILOR\cite{EVEl02}         & \xmark & \cmark & \xmark & ?            & \xmark & \xmark & \xmark & ? & ? \\ [1ex]
+\hline
+AERCS            			& \xmark & \cmark & \cmark & CSV          & \xmark & \xmark & \xmark & ? & \cmark \\ [1ex]    
+\hline
+i5CloudMatch         			& \cmark & \xmark & \cmark & CSV,XML      & \cmark & \cmark & \xmark & \cmark & \cmark \\ [1ex]    
+\hline
+\end{tabular}
+\label{table:EMframeworks} 
+\end{sidewaystable}
+
+
+
+
+

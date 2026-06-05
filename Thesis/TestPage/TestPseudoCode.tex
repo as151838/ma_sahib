@@ -1,0 +1,38 @@
+\documentclass[11pt,oneside,a4paper,fleqn]{memoir}
+\usepackage[a4paper,top=4.5cm, bottom=3.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{xcolor}
+%\usepackage{sort}
+\usepackage{amssymb} 
+\usepackage{pifont} 
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{comment}
+\usepackage{mathtools}
+\usepackage{epstopdf}
+\usepackage{algorithm2e}
+\usepackage{float}
+\usepackage{natbib}
+\setlength{\mathindent}{0pt}
+\usepackage{xcolor,colortbl}
+\newcommand{\f}{\cellcolor{teal}}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\begin{document}
+\pagecolor{white}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+
+\cite{BGM*09}
+\cite{BhGe04}
+\bibliographystyle{atlas}
+\bibliography{references}{}
+\begin{figure}[H]
+\centering
+\includegraphics {Framework_Layered_architecture.eps}  
+\caption{Framework Architecture}
+\label{fig:Framework Architecture}
+\end{figure}
+\end{document}

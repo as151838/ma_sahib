@@ -1,0 +1,76 @@
+\contentsline {chapter}{Contents}{3}
+\contentsline {chapter}{\chapternumberline {1}Introduction}{5}
+\contentsline {section}{\numberline {1.1}Motivation}{6}
+\contentsline {section}{\numberline {1.2}Thesis Goals}{6}
+\contentsline {chapter}{\chapternumberline {2}Background}{7}
+\contentsline {section}{\numberline {2.1}Entity Matching}{7}
+\contentsline {subsection}{\numberline {2.1.1}Attribute Based Entity Matching}{7}
+\contentsline {subsection}{\numberline {2.1.2}Relational Entity Matching}{7}
+\contentsline {subsection}{\numberline {2.1.3}Collective Entity Matching}{8}
+\contentsline {section}{\numberline {2.2}Graph-Based Entity Matching}{9}
+\contentsline {subsection}{\numberline {2.2.1}Issues with Graph-based Entity Matching}{9}
+\contentsline {subsubsection}{\numberline {2.2.1.1}Multi-Type Entity Matching}{9}
+\contentsline {subsubsection}{\numberline {2.2.1.2}Collective Entity Matching}{9}
+\contentsline {subsubsection}{\numberline {2.2.1.3}Positive and Negative Relational Evidence}{9}
+\contentsline {subsection}{\numberline {2.2.2}Graph-based Similarity}{10}
+\contentsline {subsubsection}{\numberline {2.2.2.1}Edge Detail Similarity}{10}
+\contentsline {subsubsection}{\numberline {2.2.2.2}Neighborhood Similarity}{10}
+\contentsline {section}{\numberline {2.3}Cloud-based Programming Models}{11}
+\contentsline {subsection}{\numberline {2.3.1}MapReduce Programming Model}{11}
+\contentsline {subsection}{\numberline {2.3.2}BSP Programming Model}{12}
+\contentsline {section}{\numberline {2.4}Clustering Approaches}{13}
+\contentsline {subsection}{\numberline {2.4.1}Relational Clustering}{13}
+\contentsline {subsection}{\numberline {2.4.2}Component-based Clustering}{13}
+\contentsline {subsection}{\numberline {2.4.3}Semi-clustering}{14}
+\contentsline {subsection}{\numberline {2.4.4}Clustering Aggregation}{14}
+\contentsline {section}{\numberline {2.5}Blocking methods}{14}
+\contentsline {subsection}{\numberline {2.5.1}Canopies}{14}
+\contentsline {subsection}{\numberline {2.5.2}Semantic Blocking}{15}
+\contentsline {section}{\numberline {2.6}Partitioning Strategies}{15}
+\contentsline {subsection}{\numberline {2.6.1}Size-based Partitioning}{15}
+\contentsline {subsection}{\numberline {2.6.2}Blocking-based Partitioning}{15}
+\contentsline {chapter}{\chapternumberline {3}State Of The Art}{16}
+\contentsline {section}{\numberline {3.1}Entity Matching Systems and Frameworks}{16}
+\contentsline {section}{\numberline {3.2}Parallel/Distributed Entity Matching}{19}
+\contentsline {section}{\numberline {3.3}Cloud-based Entity Matching}{20}
+\contentsline {section}{\numberline {3.4}Summary}{21}
+\contentsline {chapter}{\chapternumberline {4}Cloud Approach}{24}
+\contentsline {section}{\numberline {4.1}Simple Example}{24}
+\contentsline {section}{\numberline {4.2}Theoretical Foundation}{26}
+\contentsline {section}{\numberline {4.3}Proposed Solution}{27}
+\contentsline {subsection}{\numberline {4.3.1}Load Data}{28}
+\contentsline {subsection}{\numberline {4.3.2}Blocking}{28}
+\contentsline {subsection}{\numberline {4.3.3}Distribution}{28}
+\contentsline {subsection}{\numberline {4.3.4}Matching}{29}
+\contentsline {subsection}{\numberline {4.3.5}Save Data}{29}
+\contentsline {section}{\numberline {4.4}Blocking}{29}
+\contentsline {section}{\numberline {4.5}Distribution}{30}
+\contentsline {section}{\numberline {4.6}Matching by Collective Relational Entity Matching}{30}
+\contentsline {section}{\numberline {4.7}Vertex-oriented Collective Relational Clustering Algorithm}{31}
+\contentsline {subsection}{\numberline {4.7.1}Extending the Theoretical Foundation}{35}
+\contentsline {subsection}{\numberline {4.7.2}Mathematical Foundation of the Communication}{35}
+\contentsline {subsection}{\numberline {4.7.3}Complexity Analysis}{36}
+\contentsline {subsection}{\numberline {4.7.4}Multi-type Entity Matching}{36}
+\contentsline {subsection}{\numberline {4.7.5}Canonicalization}{37}
+\contentsline {subsection}{\numberline {4.7.6}Optimizing for the Cloud}{37}
+\contentsline {section}{\numberline {4.8}Adaptive/Incremental Entity Matching}{38}
+\contentsline {section}{\numberline {4.9}Graph-based Data Warehouse}{38}
+\contentsline {chapter}{\chapternumberline {5}Implementation}{39}
+\contentsline {section}{\numberline {5.1}Framework Architecture}{39}
+\contentsline {section}{\numberline {5.2}i5Cloud Test bed}{40}
+\contentsline {subsection}{\numberline {5.2.1}OpenStack}{40}
+\contentsline {section}{\numberline {5.3}Hama}{40}
+\contentsline {section}{\numberline {5.4}SimMetrics}{40}
+\contentsline {chapter}{\chapternumberline {6}Evaluation}{41}
+\contentsline {section}{\numberline {6.1}Measuring Matching Quality}{41}
+\contentsline {subsubsection}{\numberline {6.1.0.1}Accuracy}{41}
+\contentsline {subsubsection}{\numberline {6.1.0.2}Precision}{42}
+\contentsline {subsubsection}{\numberline {6.1.0.3}Recall}{42}
+\contentsline {subsubsection}{\numberline {6.1.0.4}F-measure}{42}
+\contentsline {section}{\numberline {6.2}Measuring Framework Efficiency}{42}
+\contentsline {section}{\numberline {6.3}Evaluation Plan}{43}
+\contentsline {section}{\numberline {6.4}Test Data Sets}{43}
+\contentsline {subsubsection}{\numberline {6.4.0.5}DBLP}{43}
+\contentsline {subsubsection}{\numberline {6.4.0.6}CiteSeerX}{43}
+\contentsline {chapter}{\chapternumberline {7}Time Plan}{44}
+\contentsline {chapter}{Bibliography}{45}

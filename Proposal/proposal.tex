@@ -1,0 +1,59 @@
+\documentclass[11pt,oneside,a4paper,fleqn]{memoir}
+\usepackage[a4paper,top=4.5cm, bottom=3.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{cite}
+\usepackage{amssymb} 
+\usepackage{pifont} 
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{comment}
+\usepackage{mathtools}
+\usepackage{epstopdf}
+\usepackage{algorithm2e}
+\usepackage{float}
+%\usepackage{natbib}
+\setlength{\mathindent}{0pt}
+\usepackage{xcolor,colortbl}
+\newcommand{\f}{\cellcolor{teal}}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\begin{document}
+\pagecolor{white}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+
+
+%**********************************************************
+% hyperref setup
+%**********************************************************
+
+%**********************************************************
+% Titlepage
+%**********************************************************
+\pagestyle{empty}
+	\include{ch_frontmatter/titlePage}
+%**********************************************************
+% abstract
+%**********************************************************
+
+%**********************************************************
+% table of contents
+%**********************************************************
+\tableofcontents
+
+%**********************************************************
+% Chapters
+%**********************************************************
+\include{ch_introduction/introduction}
+\include{ch_background/background}
+\include{ch_stateOfTheArt/stateOfTheArt}
+\include{ch_ConceptualApproach/ConceptualApproach}
+\include{ch_implementation/implementation}
+\include{ch_evaluation/evaluation}
+\include{ch_TimePlan/timePlan}
+\bibliography{references}{}
+\bibliographystyle{alpha}
+\end{document}

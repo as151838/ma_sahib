@@ -1,0 +1,2 @@
+<article mdate="2002-01-03" key="persons/Hall74"><author>Patrick A. V. Hall</author><title>Common Subexpression Identification inGeneralAlgebraic Systems.</title><journal>Technical Rep. UKSC 0060, IBM United Kingdom Scientific Centre</journal><month>November</month><year>1974</year></article>
+<inproceedings mdate="2013-11-23" key="persons/SahibS13"><author>Sahib Ammar</author><author>Adel Sami</author><title>VOTEL</title><pages>112-131</pages><year>2013</year><booktitle>(DMA'13)</booktitle></inproceedings>
